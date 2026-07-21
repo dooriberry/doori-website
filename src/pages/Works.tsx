@@ -31,7 +31,7 @@ function Placeholder({ title }: { title: string }) {
     >
       <div className="flex items-center gap-3">
         <img src={logoSquare} alt="" className="h-10 w-10 rounded-full border border-hairline bg-canvas" />
-        <span className="max-w-[220px] break-keep text-[15px] font-light leading-[1.4] text-ink-secondary">
+        <span className="max-w-[220px] break-keep text-[15px] font-normal leading-[1.4] text-ink-secondary">
           {title}
         </span>
       </div>
@@ -82,10 +82,10 @@ function SiteCard({ site }: { site: Site }) {
           ))}
         </div>
         {/* heading-md */}
-        <h2 className="mt-4 break-keep text-[20px] font-light leading-[1.35] tracking-[-0.2px] text-ink">
+        <h2 className="mt-4 break-keep text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
           {site.title}
         </h2>
-        <p className="mt-2 break-keep text-[15px] font-light leading-[1.6] text-ink-secondary">
+        <p className="mt-2 break-keep text-[15px] font-normal leading-[1.6] text-ink-secondary">
           {site.desc}
         </p>
         <span className="link-cta mt-5 text-[14px]">
@@ -121,10 +121,10 @@ function Works() {
           제작 사이트
         </span>
         {/* display-xl */}
-        <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-light leading-[1.15] tracking-[-0.64px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.96px]">
+        <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
           직접 만든 사이트들입니다.
         </h1>
-        <p className="mt-6 max-w-md break-keep text-[16px] font-light leading-[1.65] text-ink-secondary">
+        <p className="mt-6 max-w-md break-keep text-[16px] font-normal leading-[1.65] text-ink-secondary">
           카드를 누르면 실제 운영 중인 사이트로 이동합니다. 완성될 때마다
           이곳에 하나씩 추가됩니다.
         </p>
@@ -138,17 +138,17 @@ function Works() {
         ) : (
           /* 빈 상태 */
           <div className="mt-12 rounded-xl border border-dashed border-hairline-input bg-canvas-soft p-14 text-center">
-            <p className="text-[20px] font-light leading-[1.35] tracking-[-0.2px] text-ink">
+            <p className="text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
               첫 사이트를 준비하고 있어요.
             </p>
-            <p className="mt-2 text-[15px] font-light leading-[1.6] text-ink-mute">
+            <p className="mt-2 text-[15px] font-normal leading-[1.6] text-ink-mute">
               완성되는 대로 이곳에서 바로 보실 수 있습니다.
             </p>
           </div>
         )}
 
         <div className="mt-16 text-center">
-          <p className="text-[15px] font-light text-ink-secondary">
+          <p className="text-[15px] font-normal text-ink-secondary">
             이런 사이트가 필요하신가요?
           </p>
           <div className="mt-5">

@@ -11,7 +11,7 @@ const SHEET_WEBHOOK_URL =
 /* text-input — DESIGN.md: canvas bg, ink text, body-md, 8px 12px,
    rounded-sm 6px, hairline-input 보더, 포커스 시 primary 보더 */
 const inputClass =
-  'w-full rounded-[6px] border bg-canvas px-3.5 py-2.5 text-[15px] font-light leading-[1.4] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none'
+  'w-full rounded-[6px] border bg-canvas px-3.5 py-2.5 text-[15px] font-normal leading-[1.4] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none'
 
 const labelClass =
   'block text-[13px] font-normal tracking-[-0.39px] text-ink-mute'
@@ -103,10 +103,10 @@ function Contact() {
         상담 문의
       </span>
       {/* display-xl */}
-      <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-light leading-[1.15] tracking-[-0.64px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.96px]">
+      <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
         편하게 연락 주세요.
       </h1>
-      <p className="mt-6 max-w-md break-keep text-[16px] font-light leading-[1.65] text-ink-secondary">
+      <p className="mt-6 max-w-md break-keep text-[16px] font-normal leading-[1.65] text-ink-secondary">
         어떤 사이트가 필요한지 아직 정리되지 않아도 괜찮습니다. 아래 내용만
         적어주시면 필요한 것부터 함께 정리해드립니다.
       </p>
@@ -120,10 +120,10 @@ function Contact() {
               접수 완료
             </span>
             {/* display-md: 26px / 300 / -0.26px */}
-            <h2 className="mt-6 break-keep text-[26px] font-light leading-[1.12] tracking-[-0.26px] text-ink">
+            <h2 className="mt-6 break-keep text-[26px] font-bold leading-[1.12] tracking-[-0.26px] text-ink">
               문의가 접수되었어요.
             </h2>
-            <p className="mt-3 break-keep text-[16px] font-light leading-[1.4] text-ink-secondary">
+            <p className="mt-3 break-keep text-[16px] font-normal leading-[1.4] text-ink-secondary">
               1~2일 안에 연락드릴게요.
             </p>
 
@@ -170,7 +170,7 @@ function Contact() {
             className="rounded-xl border border-hairline bg-canvas p-6 shadow-level-2 sm:p-8"
           >
             {/* 담당자 정보 */}
-            <h2 className="flex items-center gap-2.5 text-[18px] font-light leading-[1.4] text-ink">
+            <h2 className="flex items-center gap-2.5 text-[18px] font-medium leading-[1.4] text-ink">
               <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-primary" />
               담당자 정보
             </h2>
@@ -250,7 +250,7 @@ function Contact() {
             <div className="mt-8 h-px w-full bg-hairline" />
 
             {/* 원하는 사이트 */}
-            <h2 className="mt-8 flex items-center gap-2.5 text-[18px] font-light leading-[1.4] text-ink">
+            <h2 className="mt-8 flex items-center gap-2.5 text-[18px] font-medium leading-[1.4] text-ink">
               <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-ruby/80" />
               원하는 사이트
             </h2>
@@ -308,10 +308,10 @@ function Contact() {
             <span className="rounded-full bg-primary-subdued px-2 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.1px] text-primary-deep">
               빠른 답변
             </span>
-            <h2 className="mt-4 text-[20px] font-light leading-[1.4] tracking-[-0.2px] text-ink">
+            <h2 className="mt-4 text-[20px] font-medium leading-[1.4] tracking-[-0.2px] text-ink">
               인스타그램 DM
             </h2>
-            <p className="mt-2 break-keep text-[15px] font-light leading-[1.4] text-ink-secondary">
+            <p className="mt-2 break-keep text-[15px] font-normal leading-[1.4] text-ink-secondary">
               폼 작성이 번거로우시면 DM으로 편하게 물어보세요.
             </p>
             <div className="mt-5">
@@ -333,10 +333,10 @@ function Contact() {
           </div>
 
           <div className="card-lift rounded-xl bg-canvas-cream p-6 text-ink sm:p-8">
-            <h2 className="text-[20px] font-light leading-[1.4] tracking-[-0.2px] text-ink">
+            <h2 className="text-[20px] font-medium leading-[1.4] tracking-[-0.2px] text-ink">
               이메일
             </h2>
-            <p className="mt-2 break-keep text-[15px] font-light leading-[1.4] text-ink-secondary">
+            <p className="mt-2 break-keep text-[15px] font-normal leading-[1.4] text-ink-secondary">
               참고 자료를 함께 보내주시면 더 구체적으로 답변드릴 수 있습니다.
             </p>
             <p className="mt-4 text-[13px] font-normal tracking-[-0.39px] text-ink-secondary">

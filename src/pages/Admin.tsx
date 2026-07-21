@@ -15,7 +15,7 @@ const SHEET_API_URL =
 
 /* text-input — DESIGN.md 스펙 */
 const inputClass =
-  'w-full rounded-[6px] border border-hairline-input bg-canvas px-3.5 py-2.5 text-[15px] font-light leading-[1.4] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none'
+  'w-full rounded-[6px] border border-hairline-input bg-canvas px-3.5 py-2.5 text-[15px] font-normal leading-[1.4] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none'
 
 /* ── 비밀번호 입력 화면 ── */
 function Login({ onSuccess }: { onSuccess: () => void }) {
@@ -40,7 +40,7 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
           className="rounded-xl border border-hairline bg-canvas p-8 shadow-level-2"
         >
           <img src={logoSquare} alt="두리" className="mx-auto h-14 w-14" />
-          <h1 className="mt-5 text-center text-[22px] font-light leading-[1.1] tracking-[-0.22px] text-ink">
+          <h1 className="mt-5 text-center text-[22px] font-bold leading-[1.1] tracking-[-0.22px] text-ink">
             관리자 로그인
           </h1>
           <p className="mt-2 text-center text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
@@ -345,11 +345,11 @@ function InquiryTable() {
               </p>
               {/* display-lg: 40px / 300 / 음수 자간 + tnum */}
               <p
-                className={`mt-3 text-[40px] font-light leading-[1.05] tracking-[-0.8px] ${stat.numCls}`}
+                className={`mt-3 text-[40px] font-normal leading-[1.05] tracking-[-0.8px] ${stat.numCls}`}
                 style={{ fontFeatureSettings: '"tnum"' }}
               >
                 {stat.value === null ? '–' : stat.value}
-                <span className={`ml-1.5 text-[15px] font-light tracking-normal opacity-70 ${stat.labelCls}`}>
+                <span className={`ml-1.5 text-[15px] font-normal tracking-normal opacity-70 ${stat.labelCls}`}>
                   건
                 </span>
               </p>
@@ -368,7 +368,7 @@ function InquiryTable() {
       <section className="mt-6 overflow-hidden rounded-xl border border-hairline bg-canvas shadow-level-1">
       <div className="flex items-center gap-3 border-b border-hairline px-6 py-4">
         {/* heading-sm */}
-        <h2 className="text-[18px] font-light leading-[1.4] text-ink">
+        <h2 className="text-[18px] font-medium leading-[1.4] text-ink">
           문의 목록
         </h2>
         <span className="hidden text-[13px] font-normal tracking-[-0.39px] text-ink-mute sm:inline">
@@ -402,19 +402,19 @@ function InquiryTable() {
       )}
 
       {loading && (
-        <p className="px-6 py-12 text-center text-[15px] font-light text-ink-mute">
+        <p className="px-6 py-12 text-center text-[15px] font-normal text-ink-mute">
           문의 목록을 불러오는 중이에요…
         </p>
       )}
 
       {!loading && error && (
-        <p className="break-keep px-6 py-12 text-center text-[15px] font-light text-ruby">
+        <p className="break-keep px-6 py-12 text-center text-[15px] font-normal text-ruby">
           {error}
         </p>
       )}
 
       {!loading && !error && rows && rows.length === 0 && (
-        <p className="px-6 py-12 text-center text-[15px] font-light text-ink-mute">
+        <p className="px-6 py-12 text-center text-[15px] font-normal text-ink-mute">
           아직 접수된 문의가 없어요.
         </p>
       )}
@@ -453,7 +453,7 @@ function InquiryTable() {
                     <td className="px-6 py-3.5 text-[14px] font-normal tracking-[-0.42px] text-ink">
                       {row.company || '-'}
                     </td>
-                    <td className="px-4 py-3.5 text-[14px] font-light tracking-[-0.42px] text-ink-secondary">
+                    <td className="px-4 py-3.5 text-[14px] font-normal tracking-[-0.42px] text-ink-secondary">
                       {row.name || '-'}
                     </td>
                     <td
@@ -478,7 +478,7 @@ function InquiryTable() {
                       </select>
                     </td>
                     <td
-                      className="whitespace-nowrap px-6 py-3.5 text-[14px] font-light tracking-[-0.42px] text-ink-mute"
+                      className="whitespace-nowrap px-6 py-3.5 text-[14px] font-normal tracking-[-0.42px] text-ink-mute"
                       style={{ fontFeatureSettings: '"tnum"' }}
                     >
                       {formatDate(row.submittedAt)}
@@ -496,7 +496,7 @@ function InquiryTable() {
       {selected && (
         <section className="mt-6 overflow-hidden rounded-xl border border-hairline bg-canvas shadow-level-2">
           <div className="flex items-center gap-3 border-b border-hairline px-6 py-4">
-            <h2 className="text-[18px] font-light leading-[1.4] text-ink">
+            <h2 className="text-[18px] font-medium leading-[1.4] text-ink">
               문의 상세
             </h2>
             <span
@@ -527,7 +527,7 @@ function InquiryTable() {
                 <p className="text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
                   {f.label}
                 </p>
-                <p className="mt-1 break-keep text-[15px] font-light leading-[1.5] text-ink">
+                <p className="mt-1 break-keep text-[15px] font-normal leading-[1.5] text-ink">
                   {f.value || '-'}
                 </p>
               </div>
@@ -536,7 +536,7 @@ function InquiryTable() {
               <p className="text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
                 원하는 사이트 느낌
               </p>
-              <p className="mt-1 whitespace-pre-wrap break-keep text-[15px] font-light leading-[1.6] text-ink">
+              <p className="mt-1 whitespace-pre-wrap break-keep text-[15px] font-normal leading-[1.6] text-ink">
                 {selected.style || '-'}
               </p>
             </div>
@@ -544,7 +544,7 @@ function InquiryTable() {
 
           {/* 답장 보내기 */}
           <div className="border-t border-hairline px-6 py-6">
-            <h3 className="flex items-center gap-2.5 text-[18px] font-light leading-[1.4] text-ink">
+            <h3 className="flex items-center gap-2.5 text-[18px] font-medium leading-[1.4] text-ink">
               <span
                 aria-hidden="true"
                 className="h-1.5 w-1.5 rounded-full bg-primary"
@@ -566,7 +566,7 @@ function InquiryTable() {
                     setReplyResult(null)
                   }}
                   placeholder={`안녕하세요, ${selected.name || '담당자'}님. 문의 주셔서 감사합니다.`}
-                  className="mt-4 w-full resize-y rounded-[6px] border border-hairline-input bg-canvas px-3.5 py-2.5 text-[15px] font-light leading-[1.6] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none"
+                  className="mt-4 w-full resize-y rounded-[6px] border border-hairline-input bg-canvas px-3.5 py-2.5 text-[15px] font-normal leading-[1.6] text-ink transition-[border-color,box-shadow] duration-150 placeholder:text-ink-mute focus:border-primary focus:shadow-[0_0_0_4px_rgba(83,58,253,0.08)] focus:outline-none"
                 />
                 <div className="mt-4 flex flex-wrap items-center gap-4">
                   <button
@@ -590,7 +590,7 @@ function InquiryTable() {
                 </div>
               </>
             ) : (
-              <p className="mt-3 break-keep text-[15px] font-light text-ink-mute">
+              <p className="mt-3 break-keep text-[15px] font-normal text-ink-mute">
                 이 문의에는 이메일 주소가 없어 답장을 보낼 수 없어요. 연락처(
                 {selected.phone || '-'})로 직접 연락해주세요.
               </p>
@@ -637,7 +637,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
           <div className="ml-auto flex items-center gap-5">
             <Link
               to="/"
-              className="text-[14px] font-light text-ink-mute transition-colors hover:text-primary"
+              className="text-[14px] font-normal text-ink-mute transition-colors hover:text-primary"
             >
               사이트 보기
             </Link>
@@ -653,7 +653,7 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
       </header>
 
       <main className="mx-auto max-w-[1200px] px-6 py-14">
-        <h1 className="text-[26px] font-light leading-[1.1] tracking-[-0.26px] text-ink md:text-[32px] md:tracking-[-0.64px]">
+        <h1 className="text-[26px] font-bold leading-[1.1] tracking-[-0.26px] text-ink md:text-[32px] md:tracking-[-0.5px]">
           관리자 대시보드
         </h1>
         <p className="mt-2 text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
@@ -671,10 +671,10 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
                 key={card.title}
                 className="card-lift flex flex-col rounded-xl border border-hairline bg-canvas p-7 shadow-level-1"
               >
-                <h2 className="text-[20px] font-light leading-[1.35] tracking-[-0.2px] text-ink">
+                <h2 className="text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
                   {card.title}
                 </h2>
-                <p className="mt-2.5 flex-1 break-keep text-[15px] font-light leading-[1.6] text-ink-secondary">
+                <p className="mt-2.5 flex-1 break-keep text-[15px] font-normal leading-[1.6] text-ink-secondary">
                   {card.desc}
                 </p>
                 <div className="mt-5">
@@ -711,13 +711,13 @@ function Dashboard({ onLogout }: { onLogout: () => void }) {
         </div>
 
         <div className="mt-8 rounded-xl bg-canvas-cream p-7 text-ink">
-          <h2 className="text-[18px] font-light leading-[1.4] text-ink">
+          <h2 className="text-[18px] font-medium leading-[1.4] text-ink">
             비밀번호 변경 방법
           </h2>
-          <p className="mt-2 break-keep text-[15px] font-light leading-[1.6] text-ink-secondary">
-            프로젝트 폴더의 <span className="font-normal text-ink">.env</span>{' '}
+          <p className="mt-2 break-keep text-[15px] font-normal leading-[1.6] text-ink-secondary">
+            프로젝트 폴더의 <span className="font-semibold text-ink">.env</span>{' '}
             파일을 열어{' '}
-            <span className="font-normal text-ink">VITE_ADMIN_PASSWORD</span>{' '}
+            <span className="font-semibold text-ink">VITE_ADMIN_PASSWORD</span>{' '}
             값을 바꾼 뒤 저장하면 됩니다.
           </p>
         </div>

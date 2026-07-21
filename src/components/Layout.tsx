@@ -37,13 +37,13 @@ function TopTicker() {
     <div className="relative z-10 overflow-hidden bg-brand-dark py-1.5">
       <div className="flex w-max animate-ticker gap-6 motion-reduce:animate-none">
         {/* 같은 줄 2벌 — 끊김 없는 루프용 */}
-        <div className="flex shrink-0 items-center gap-6 text-[11px] font-light leading-[1.4] text-white">
+        <div className="flex shrink-0 items-center gap-6 text-[11px] font-normal leading-[1.4] text-white">
           {line}
           {line}
         </div>
         <div
           aria-hidden="true"
-          className="flex shrink-0 items-center gap-6 text-[11px] font-light leading-[1.4] text-white"
+          className="flex shrink-0 items-center gap-6 text-[11px] font-normal leading-[1.4] text-white"
         >
           {line}
           {line}
@@ -81,7 +81,7 @@ function Layout() {
                     `inline-block py-2 text-[15px] leading-none transition-colors ${
                       isActive
                         ? 'font-normal text-primary'
-                        : 'font-light text-ink hover:text-primary'
+                        : 'font-normal text-ink hover:text-primary'
                     }`
                   }
                 >
@@ -103,7 +103,7 @@ function Layout() {
           <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
             <div>
               <img src={logoHorizontal} alt="두리" className="h-10 w-auto" />
-              <p className="mt-4 max-w-xs break-keep text-[13px] font-light leading-[1.6] tracking-[-0.39px] text-ink-mute">
+              <p className="mt-4 max-w-xs break-keep text-[13px] font-normal leading-[1.6] tracking-[-0.39px] text-ink-mute">
                 기업·소상공인을 위한 사이트·웹 앱 제작.
                 <br />한 번 하고 끝나는 게 아니라, 다음 날 매출이 바뀝니다.
               </p>
@@ -118,7 +118,7 @@ function Layout() {
                   <li key={item.to}>
                     <Link
                       to={item.to}
-                      className="text-[13px] font-light tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
+                      className="text-[13px] font-normal tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
                     >
                       {item.label}
                     </Link>
@@ -137,7 +137,7 @@ function Layout() {
                     href="https://www.instagram.com/doori_web"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[13px] font-light tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
+                    className="text-[13px] font-normal tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
                   >
                     인스타그램 DM
                   </a>
@@ -145,7 +145,7 @@ function Layout() {
                 <li>
                   <a
                     href="mailto:loveless7737@gmail.com"
-                    className="text-[13px] font-light tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
+                    className="text-[13px] font-normal tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
                   >
                     loveless7737@gmail.com
                   </a>
@@ -155,10 +155,10 @@ function Layout() {
           </div>
 
           <div className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-hairline pt-6">
-            <p className="text-[11px] font-light text-ink-mute">
+            <p className="text-[11px] font-normal text-ink-mute">
               © 2026 두리. All rights reserved.
             </p>
-            <p className="flex items-center gap-2 text-[11px] font-light text-ink-mute">
+            <p className="flex items-center gap-2 text-[11px] font-normal text-ink-mute">
               <img src={logoSquare} alt="" className="h-5 w-5" />
               정성을 다해, 하나씩
             </p>

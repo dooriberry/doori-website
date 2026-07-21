@@ -50,7 +50,7 @@ function Process() {
           제작 순서 및 프로그램
         </span>
         {/* display-xl: 48px / 300 / -0.96px */}
-        <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-light leading-[1.15] tracking-[-0.64px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.96px]">
+        <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
           상담 접수부터 배포까지,
           <br />세 단계로 진행합니다.
         </h1>
@@ -59,7 +59,7 @@ function Process() {
       {/* 작업 방식 — card-feature-light 3-up */}
       <section className="mx-auto max-w-[1200px] px-6 pb-24 pt-16 lg:pb-32">
         {/* heading-md 섹션 라벨 */}
-        <h2 className="text-[20px] font-light leading-[1.4] tracking-[-0.2px] text-ink">
+        <h2 className="text-[20px] font-medium leading-[1.4] tracking-[-0.2px] text-ink">
           작업 방식
         </h2>
         <p className="mt-1.5 text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
@@ -80,11 +80,11 @@ function Process() {
                 {step.no}
               </span>
               {/* heading-lg */}
-              <h3 className="mt-6 text-[22px] font-light leading-[1.1] tracking-[-0.22px] text-ink">
+              <h3 className="mt-6 text-[22px] font-bold leading-[1.1] tracking-[-0.22px] text-ink">
                 {step.title}
               </h3>
               {/* 한 줄 소개 — 줄간격 여유 */}
-              <p className="mt-3.5 break-keep text-[15px] font-light leading-[1.6] text-ink-secondary">
+              <p className="mt-3.5 break-keep text-[15px] font-normal leading-[1.6] text-ink-secondary">
                 {step.desc}
               </p>
             </div>
@@ -96,7 +96,7 @@ function Process() {
       <section className="bg-canvas-soft">
         <div className="mx-auto max-w-[1200px] px-6 py-20 lg:py-24">
           {/* display-lg */}
-          <h2 className="text-[26px] font-light leading-[1.1] tracking-[-0.26px] text-ink md:text-[32px] md:tracking-[-0.64px]">
+          <h2 className="text-[26px] font-bold leading-[1.1] tracking-[-0.26px] text-ink md:text-[32px] md:tracking-[-0.5px]">
             앞으로의 목표
           </h2>
           <p className="mt-2 text-[13px] font-normal tracking-[-0.39px] text-ink-mute">
@@ -124,10 +124,10 @@ function Process() {
                       {goal.tag}
                     </span>
                     {/* heading-md */}
-                    <h3 className="mt-5 break-keep text-[20px] font-light leading-[1.35] tracking-[-0.2px] text-white">
+                    <h3 className="mt-5 break-keep text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-white">
                       {goal.title}
                     </h3>
-                    <p className="mt-2.5 break-keep text-[15px] font-light leading-[1.6] text-white/70">
+                    <p className="mt-2.5 break-keep text-[15px] font-normal leading-[1.6] text-white/70">
                       {goal.desc}
                     </p>
                   </div>
@@ -141,10 +141,10 @@ function Process() {
                   <span className="rounded-full bg-canvas px-2.5 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-ink-mute">
                     {goal.tag}
                   </span>
-                  <h3 className="mt-5 break-keep text-[20px] font-light leading-[1.35] tracking-[-0.2px] text-ink">
+                  <h3 className="mt-5 break-keep text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
                     {goal.title}
                   </h3>
-                  <p className="mt-2.5 break-keep text-[15px] font-light leading-[1.6] text-ink-secondary">
+                  <p className="mt-2.5 break-keep text-[15px] font-normal leading-[1.6] text-ink-secondary">
                     {goal.desc}
                   </p>
                 </div>

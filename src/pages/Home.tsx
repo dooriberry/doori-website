@@ -19,14 +19,14 @@ function Home() {
             </span>
 
             {/* display-xxl: 56px / 300 / -1.4px / lh 1.03~ */}
-            <h1 className="mt-7 max-w-xl break-keep text-[36px] font-light leading-[1.12] tracking-[-0.96px] text-ink md:text-[48px] lg:text-[56px] lg:leading-[1.08] lg:tracking-[-1.4px]">
+            <h1 className="mt-7 max-w-xl break-keep text-[36px] font-bold leading-[1.12] tracking-[-0.7px] text-ink md:text-[48px] lg:text-[56px] lg:leading-[1.08] lg:tracking-[-1px]">
               한 번 하고 끝나는 게 아니라,
               <br />
               <span className="text-primary">다음 날 매출이 바뀝니다.</span>
             </h1>
 
             {/* body-lg lead — 줄간격 여유 */}
-            <p className="mt-7 max-w-md break-keep text-[16px] font-light leading-[1.65] text-ink-secondary">
+            <p className="mt-7 max-w-md break-keep text-[16px] font-normal leading-[1.65] text-ink-secondary">
               말 관리사로 현장을 뛰며 느낀 아날로그의 불편함을 바이브코딩으로
               직접 해결해온 개발자가, 상담부터 제작·배포까지 책임지고
               진행합니다.
@@ -92,7 +92,7 @@ function Home() {
                   />
                   <div>
                     {/* heading-lg: 22px / 300 / -0.22px */}
-                    <h2 className="text-[22px] font-light leading-[1.1] tracking-[-0.22px] text-ink">
+                    <h2 className="text-[22px] font-bold leading-[1.1] tracking-[-0.22px] text-ink">
                       두리
                     </h2>
                     {/* caption */}
@@ -107,16 +107,16 @@ function Home() {
                 <ul className="mt-6 space-y-5">
                   <li className="flex gap-3">
                     <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary-soft" />
-                    <span className="break-keep text-[15px] font-light leading-[1.55] text-ink-secondary">
+                    <span className="break-keep text-[15px] font-normal leading-[1.55] text-ink-secondary">
                       AI 콘텐츠 교육 수강
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-ruby/80" />
-                    <span className="break-keep text-[15px] font-light leading-[1.55] text-ink-secondary">
+                    <span className="break-keep text-[15px] font-normal leading-[1.55] text-ink-secondary">
                       현직 말 관리사로서 현장에 필요한 앱을 직접 바이브코딩으로
                       제작해{' '}
-                      <span className="font-normal text-ink">
+                      <span className="font-semibold text-ink">
                         현장에서 실제로 사용
                       </span>{' '}
                       중
@@ -124,7 +124,7 @@ function Home() {
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-magenta/80" />
-                    <span className="break-keep text-[15px] font-light leading-[1.55] text-ink-secondary">
+                    <span className="break-keep text-[15px] font-normal leading-[1.55] text-ink-secondary">
                       전직 UX/UI 개발자
                     </span>
                   </li>
@@ -150,10 +150,10 @@ function Home() {
         />
         <div className="relative mx-auto max-w-[1200px] px-6 py-20 text-center lg:py-24">
           {/* display-lg: 32px / 300 / -0.64px */}
-          <h2 className="break-keep text-[26px] font-light leading-[1.1] tracking-[-0.26px] text-white md:text-[32px] md:tracking-[-0.64px]">
+          <h2 className="break-keep text-[26px] font-bold leading-[1.1] tracking-[-0.26px] text-white md:text-[32px] md:tracking-[-0.5px]">
             지금 바로 문의하세요
           </h2>
-          <p className="mx-auto mt-4 max-w-sm break-keep text-[16px] font-light leading-[1.65] text-white/70">
+          <p className="mx-auto mt-4 max-w-sm break-keep text-[16px] font-normal leading-[1.65] text-white/70">
             인스타그램 DM 또는 이메일로 편하게 연락 주세요.
           </p>
           <div className="mt-9">
