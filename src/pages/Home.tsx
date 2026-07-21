@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 import logoSquare from '../assets/logo-duri.svg'
+import HeroFloatingImages from '../components/HeroFloatingImages'
 
 function Home() {
   return (
     <>
       {/* 히어로 — 여백을 시원하게 (섹션 패딩 96px대) */}
-      <section className="mx-auto max-w-[1200px] px-6 pb-24 pt-20 lg:pb-32 lg:pt-28">
-        <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-12">
+      <section className="relative overflow-hidden">
+        {/* 마우스를 따라 움직이는 패럴랙스 이미지 배경 */}
+        <HeroFloatingImages />
+
+        <div className="relative z-10 mx-auto grid max-w-[1200px] items-center gap-16 px-6 pb-24 pt-20 lg:grid-cols-2 lg:gap-12 lg:pb-32 lg:pt-28">
           {/* 왼쪽: 메시지 */}
           <div>
             {/* pill-tag-soft eyebrow */}
