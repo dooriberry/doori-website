@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# 비밀 정보 — 절대 깃허브에 올리지 않기
+.env
+구글시트-연동-스크립트.txt
+.claude/settings.local.json
+stable-app/config.js
+stable-app/test-offline.html
+stable-app/fixtures/
+
+# 이 폴더에 섞여 있는 다른 작업물 — 두리 웹사이트 배포에는 불필요
+blog-skin/
+perfect-images/
+stable-app/
+마방관리.html
+about.md.txt
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

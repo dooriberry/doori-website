@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/*
+  DESIGN.md (Stripi design system) tokens
+  - Sohne/Inter는 한글 미지원 → Pretendard 300을 대체 폰트로 사용
+  - ss01은 body 전역 적용, 디스플레이 계열은 weight 300 + negative tracking
+*/
+@theme {
+  /* colors */
+  --color-primary: #533afd;
+  --color-primary-deep: #4434d4;
+  --color-primary-press: #2e2b8c;
+  --color-primary-soft: #665efd;
+  --color-primary-subdued: #b9b9f9;
+  --color-brand-dark: #1c1e54;
+  --color-ink: #0d253d;
+  --color-ink-secondary: #273951;
+  --color-ink-mute: #64748d;
+  --color-ink-mute-2: #61718a;
+  --color-canvas: #ffffff;
+  --color-canvas-soft: #f6f9fc;
+  --color-canvas-cream: #f5e9d4;
+  --color-hairline: #e3e8ee;
+  --color-hairline-input: #a8c3de;
+  --color-ruby: #ea2261;
+  --color-magenta: #f96bee;
+  --color-lemon: #9b6829;
+
+  /* elevation */
+  --shadow-level-1: rgba(0, 55, 112, 0.08) 0 1px 3px;
+  --shadow-level-2:
+    rgba(0, 55, 112, 0.08) 0 8px 24px, rgba(0, 55, 112, 0.04) 0 2px 6px;
+
+  /* font */
+  --font-sans: "Pretendard", "SF Pro Display", system-ui, -apple-system,
+    sans-serif;
+
+  /* 상단 티커 — 천천히 왼쪽으로 흐르는 띠 */
+  --animate-ticker: ticker 45s linear infinite;
+
+  @keyframes ticker {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px; /* body-md */
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--color-ink);
+  background: var(--color-canvas);
+  font-feature-settings: "ss01"; /* 전역 ss01 — DESIGN.md 원칙 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 브랜드 디테일 — 드래그 선택도 인디고 계열로 */
+::selection {
+  background: var(--color-primary-subdued);
+  color: var(--color-brand-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@layer components {
+  /* button-primary-pill — 모바일에서 44px 터치 타깃(DESIGN.md), sm 이상 8px 16px */
+  .btn-primary {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full bg-primary px-5 py-3 text-center text-[16px] font-normal leading-none text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-deep hover:shadow-level-1 active:translate-y-0 active:bg-primary-press motion-reduce:translate-none sm:min-h-0 sm:px-4 sm:py-2;
+  }
+
+  /* button-secondary — 같은 필 지오메트리, canvas 배경 + primary 보더 */
+  .btn-secondary {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full border border-primary bg-canvas px-5 py-3 text-center text-[16px] font-normal leading-none text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-canvas-soft hover:shadow-level-1 active:translate-y-0 motion-reduce:translate-none sm:min-h-0 sm:px-4 sm:py-2;
+  }
+
+  /* 카드 호버 — 살짝 떠오르며 그림자 한 단계 상승 */
+  .card-lift {
+    @apply transition-[translate,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-level-2 motion-reduce:translate-none;
+  }
+
+  /* button-on-dark — 차분한 보조 필 버튼 (네이비), 필드당 인디고는 하나만 */
+  .btn-dark {
+    @apply inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full bg-brand-dark px-5 py-3 text-center text-[16px] font-normal leading-none text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-press hover:shadow-level-1 active:translate-y-0 motion-reduce:translate-none sm:min-h-0 sm:px-4 sm:py-2;
+  }
+
+  /* link-on-light — 조용한 텍스트 링크 CTA (화살표는 JSX에서) */
+  .link-cta {
+    @apply inline-flex min-h-11 cursor-pointer items-center gap-1 bg-transparent px-1 text-[15px] font-normal leading-none text-primary transition-colors duration-200 hover:text-primary-deep sm:min-h-0;
+  }
+}

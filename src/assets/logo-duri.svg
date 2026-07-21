@@ -1,0 +1,26 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="두리 로고">
+  <title>두리</title>
+  <desc>황갈색과 베이지색 리트리버 두 마리의 얼굴과 "두리" 워드마크로 이루어진 로고</desc>
+
+  <circle cx="200" cy="200" r="188" fill="#F7EEE1"/>
+  <circle cx="200" cy="200" r="188" fill="none" stroke="#D9C4A8" stroke-width="2"/>
+
+  <ellipse cx="103" cy="190" rx="20" ry="36" transform="rotate(-24 103 190)" fill="#A97F3E"/>
+  <ellipse cx="197" cy="190" rx="20" ry="36" transform="rotate(24 197 190)" fill="#A97F3E"/>
+  <ellipse cx="150" cy="172" rx="53" ry="50" fill="#C9A15C"/>
+  <ellipse cx="150" cy="198" rx="27" ry="21" fill="#F5EAD8"/>
+  <circle cx="132" cy="162" r="4.5" fill="#3A2A1A"/>
+  <circle cx="168" cy="162" r="4.5" fill="#3A2A1A"/>
+  <ellipse cx="150" cy="193" rx="7" ry="5" fill="#3A2A1A"/>
+
+  <ellipse cx="203" cy="190" rx="20" ry="36" transform="rotate(-24 203 190)" fill="#C2A97E"/>
+  <ellipse cx="297" cy="190" rx="20" ry="36" transform="rotate(24 297 190)" fill="#C2A97E"/>
+  <ellipse cx="250" cy="172" rx="53" ry="50" fill="#DCC9A3"/>
+  <ellipse cx="250" cy="198" rx="27" ry="21" fill="#F5EAD8"/>
+  <circle cx="232" cy="162" r="4.5" fill="#3A2A1A"/>
+  <circle cx="268" cy="162" r="4.5" fill="#3A2A1A"/>
+  <ellipse cx="250" cy="193" rx="7" ry="5" fill="#3A2A1A"/>
+
+  <text x="200" y="298" text-anchor="middle" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="68" font-weight="600" fill="#4A3226">두리</text>
+  <text x="200" y="336" text-anchor="middle" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="20" fill="#9C8874" letter-spacing="1">정성을 다해, 하나씩</text>
+</svg>
