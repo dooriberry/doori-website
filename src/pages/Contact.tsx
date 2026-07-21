@@ -316,7 +316,7 @@ function Contact() {
             </p>
             <div className="mt-5">
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/doori_web"
                 target="_blank"
                 rel="noreferrer"
                 className="group link-cta text-[14px]"

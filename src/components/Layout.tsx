@@ -134,7 +134,7 @@ function Layout() {
               <ul className="mt-4 space-y-2.5">
                 <li>
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/doori_web"
                     target="_blank"
                     rel="noreferrer"
                     className="text-[13px] font-light tracking-[-0.39px] text-ink-mute transition-colors hover:text-primary"
