@@ -70,17 +70,17 @@ function Process() {
           {STEPS.map((step) => (
             <div
               key={step.no}
-              className="card-lift rounded-xl border border-hairline bg-canvas p-7 shadow-level-1 sm:p-8"
+              className="card-lift group rounded-xl border border-hairline bg-canvas p-7 shadow-level-1 hover:border-primary hover:bg-primary-subdued/20 sm:p-8"
             >
               {/* 번호 필 서클 — tnum (DESIGN.md 숫자 원칙) */}
               <span
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-subdued text-[14px] font-normal text-primary-deep"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary-subdued text-[14px] font-normal text-primary-deep transition-colors duration-300 group-hover:bg-primary group-hover:text-white"
                 style={{ fontFeatureSettings: '"tnum"' }}
               >
                 {step.no}
               </span>
               {/* heading-lg */}
-              <h3 className="mt-6 text-[22px] font-bold leading-[1.1] tracking-[-0.22px] text-ink">
+              <h3 className="mt-6 text-[22px] font-bold leading-[1.1] tracking-[-0.22px] text-ink transition-colors duration-300 group-hover:text-primary">
                 {step.title}
               </h3>
               {/* 한 줄 소개 — 줄간격 여유 */}

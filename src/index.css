@@ -203,9 +203,9 @@ h4 {
     @apply inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full border border-primary bg-canvas px-5 py-3 text-center text-[16px] font-normal leading-none text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-canvas-soft hover:shadow-level-1 active:translate-y-0 motion-reduce:translate-none sm:min-h-0 sm:px-4 sm:py-2;
   }
 
-  /* 카드 호버 — 살짝 떠오르며 그림자 한 단계 상승 */
+  /* 카드 호버 — 살짝 떠오르며 그림자 한 단계 상승 (색 전환도 부드럽게) */
   .card-lift {
-    @apply transition-[translate,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:shadow-level-2 motion-reduce:translate-none;
+    @apply transition-[translate,box-shadow,border-color,background-color] duration-300 ease-out hover:-translate-y-1 hover:shadow-level-2 motion-reduce:translate-none;
   }
 
   /* button-on-dark — 차분한 보조 필 버튼 (네이비), 필드당 인디고는 하나만 */
