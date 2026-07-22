@@ -153,6 +153,38 @@ h4 {
     0 10px 24px rgba(0, 55, 112, 0.1);
 }
 
+/* 다크 배경용 입체 헤드라인 — 깊이 그림자 + 인디고 발광 */
+.display-3d-dark {
+  text-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.3),
+    0 3px 8px rgba(0, 0, 0, 0.4),
+    0 0 22px rgba(102, 94, 253, 0.5),
+    0 0 46px rgba(102, 94, 253, 0.28);
+}
+
+/* 다크 밴드 글로우의 은은한 펄스 */
+@keyframes glow-pulse {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 7s ease-in-out infinite alternate;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-pulse {
+    animation: none;
+  }
+}
+
 /* 동작 줄이기 사용자: 자동 움직임 정지 */
 @media (prefers-reduced-motion: reduce) {
   .hero-drift {

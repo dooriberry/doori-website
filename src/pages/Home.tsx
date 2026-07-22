@@ -137,27 +137,72 @@ function Home() {
 
       {/* 문의 밴드 — brand-dark-900 피처드 밴드 (색 리듬: 메시 → 화이트 → 딥 네이비) */}
       <section className="relative overflow-hidden bg-brand-dark">
-        {/* 다크 서피스 위 은은한 인디고/루비 글로우 */}
+        {/* 상단 하이라이트 라인 — 밴드를 살짝 떠 있는 패널처럼 */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px"
+          style={{
+            background:
+              'linear-gradient(90deg, transparent, rgba(102,94,253,0.6), rgba(249,107,238,0.4), transparent)',
+          }}
+        />
+
+        {/* 3D 원근 그리드 바닥 — 은은한 인디고 라인이 뒤로 물러난다 */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[70%]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(120,112,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(120,112,255,0.16) 1px, transparent 1px)',
+            backgroundSize: '46px 46px',
+            transform: 'perspective(520px) rotateX(62deg)',
+            transformOrigin: 'bottom center',
+            maskImage:
+              'linear-gradient(to top, rgba(0,0,0,0.9), transparent 78%)',
+            WebkitMaskImage:
+              'linear-gradient(to top, rgba(0,0,0,0.9), transparent 78%)',
+          }}
+        />
+
+        {/* 은은하게 맥동하는 인디고/마젠타 글로우 */}
+        <div
+          aria-hidden="true"
+          className="glow-pulse pointer-events-none absolute inset-0"
+          style={{
+            background: [
+              'radial-gradient(38% 60% at 16% 100%, rgba(102, 94, 253, 0.35) 0%, rgba(102, 94, 253, 0) 100%)',
+              'radial-gradient(34% 55% at 85% 4%, rgba(249, 107, 238, 0.2) 0%, rgba(249, 107, 238, 0) 100%)',
+            ].join(', '),
+          }}
+        />
+
+        {/* 헤드라인 뒤 중앙 스포트라이트 */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
           style={{
-            background: [
-              'radial-gradient(40% 70% at 15% 100%, rgba(102, 94, 253, 0.25) 0%, rgba(102, 94, 253, 0) 100%)',
-              'radial-gradient(35% 60% at 85% 0%, rgba(234, 34, 97, 0.18) 0%, rgba(234, 34, 97, 0) 100%)',
-            ].join(', '),
+            background:
+              'radial-gradient(30% 42% at 50% 40%, rgba(102,94,253,0.22) 0%, rgba(102,94,253,0) 100%)',
           }}
         />
-        <div className="relative mx-auto max-w-[1200px] px-6 py-20 text-center lg:py-24">
-          {/* display-lg: 32px / 300 / -0.64px */}
-          <h2 className="break-keep text-[26px] font-bold leading-[1.1] tracking-[-0.26px] text-white md:text-[32px] md:tracking-[-0.5px]">
+
+        <div className="relative mx-auto max-w-[1200px] px-6 py-24 text-center lg:py-28">
+          {/* pill-tag-soft eyebrow */}
+          <span className="inline-block rounded-full bg-white/10 px-3 py-1.5 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-white/80 ring-1 ring-inset ring-white/15">
+            제작 문의
+          </span>
+          {/* display-lg — 다크용 입체 텍스트 */}
+          <h2 className="display-3d-dark mt-6 break-keep text-[28px] font-bold leading-[1.1] tracking-[-0.3px] text-white md:text-[36px] md:tracking-[-0.6px]">
             지금 바로 문의하세요
           </h2>
           <p className="mx-auto mt-4 max-w-sm break-keep text-[16px] font-normal leading-[1.65] text-white/70">
             인스타그램 DM 또는 이메일로 편하게 연락 주세요.
           </p>
           <div className="mt-9">
-            <Link to="/contact" className="group btn-primary">
+            <Link
+              to="/contact"
+              className="group btn-primary shadow-[0_8px_30px_rgba(102,94,253,0.5)]"
+            >
               상담 문의 바로가기
               <span
                 aria-hidden="true"
