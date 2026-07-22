@@ -109,18 +109,27 @@ function Process() {
                 /* card-pricing-featured — brand-dark-900 위 화이트 */
                 <div
                   key={goal.title}
-                  className="card-lift relative overflow-hidden rounded-xl bg-brand-dark p-7 text-white shadow-level-1 sm:p-8"
+                  className="card-lift group relative overflow-hidden rounded-xl border border-transparent bg-brand-dark p-7 text-white shadow-level-1 hover:border-primary-soft hover:bg-[#23265f] sm:p-8"
                 >
+                  {/* hover 시 밝아지는 인디고 글로우 */}
                   <div
                     aria-hidden="true"
-                    className="pointer-events-none absolute inset-0"
+                    className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-300 group-hover:opacity-0"
                     style={{
                       background:
                         'radial-gradient(60% 80% at 100% 0%, rgba(102, 94, 253, 0.35) 0%, rgba(102, 94, 253, 0) 100%)',
                     }}
                   />
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    style={{
+                      background:
+                        'radial-gradient(70% 90% at 100% 0%, rgba(102, 94, 253, 0.6) 0%, rgba(102, 94, 253, 0) 100%)',
+                    }}
+                  />
                   <div className="relative">
-                    <span className="rounded-full bg-primary-subdued px-2.5 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-primary-deep">
+                    <span className="rounded-full bg-primary-subdued px-2.5 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-primary-deep transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
                       {goal.tag}
                     </span>
                     {/* heading-md */}
@@ -136,9 +145,9 @@ function Process() {
                 /* card-cream-band */
                 <div
                   key={goal.title}
-                  className="card-lift rounded-xl bg-canvas-cream p-7 text-ink sm:p-8"
+                  className="card-lift group rounded-xl border border-transparent bg-canvas-cream p-7 text-ink hover:border-[#e2d1ab] hover:bg-[#efdcbb] sm:p-8"
                 >
-                  <span className="rounded-full bg-canvas px-2.5 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-ink-mute">
+                  <span className="rounded-full bg-canvas px-2.5 py-1 text-[11px] font-normal leading-[1.15] tracking-[0.3px] text-ink-mute transition-colors duration-300 group-hover:bg-primary-subdued group-hover:text-primary-deep">
                     {goal.tag}
                   </span>
                   <h3 className="mt-5 break-keep text-[20px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
