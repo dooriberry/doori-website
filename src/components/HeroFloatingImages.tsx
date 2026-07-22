@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { motion } from 'motion/react'
 
 import Floating, { FloatingElement } from '@/components/ui/parallax-floating'
@@ -80,16 +81,30 @@ function HeroFloatingImages() {
       className="pointer-events-none absolute inset-0 overflow-hidden"
     >
       <Floating sensitivity={-0.7} easingFactor={0.08}>
-        {CARDS.map((card, i) => (
-          <FloatingElement key={i} depth={card.depth} className={card.className}>
-            <img
-              src={exampleImages[card.img].url}
-              alt=""
-              draggable={false}
-              className="h-full w-full rounded-2xl object-cover opacity-[0.55] shadow-[rgba(0,55,112,0.10)_0_8px_24px] md:opacity-[0.65]"
-            />
-          </FloatingElement>
-        ))}
+        {CARDS.map((card, i) => {
+          // 깊이(0.5~3) → drift(0.4~1.0): 가까운 이미지가 더 크게 흐른다
+          const drift = 0.4 + Math.min(card.depth, 3) * 0.2
+          const driftStyle: CSSProperties = {
+            ['--drift' as string]: drift.toFixed(2),
+            ['--drift-dur' as string]: `${(10 + ((i * 1.7) % 5)).toFixed(2)}s`,
+            animationDelay: `-${((i * 2.3) % 8).toFixed(2)}s`,
+          }
+          return (
+            <FloatingElement
+              key={i}
+              depth={card.depth}
+              className={card.className}
+            >
+              <img
+                src={exampleImages[card.img].url}
+                alt=""
+                draggable={false}
+                style={driftStyle}
+                className="hero-drift h-full w-full rounded-2xl object-cover opacity-[0.55] shadow-[rgba(0,55,112,0.10)_0_8px_24px] md:opacity-[0.65]"
+              />
+            </FloatingElement>
+          )
+        })}
       </Floating>
 
       {/* 중앙 흰색 베일 — 텍스트/카드 영역의 대비 확보 */}

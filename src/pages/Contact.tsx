@@ -103,7 +103,7 @@ function Contact() {
         상담 문의
       </span>
       {/* display-xl */}
-      <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
+      <h1 className="display-3d mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
         편하게 연락 주세요.
       </h1>
       <p className="mt-6 max-w-md break-keep text-[16px] font-normal leading-[1.65] text-ink-secondary">

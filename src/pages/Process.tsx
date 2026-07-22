@@ -50,7 +50,7 @@ function Process() {
           제작 순서 및 프로그램
         </span>
         {/* display-xl: 48px / 300 / -0.96px */}
-        <h1 className="mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
+        <h1 className="display-3d mt-7 max-w-2xl break-keep text-[32px] font-bold leading-[1.15] tracking-[-0.5px] text-ink md:text-[48px] md:leading-[1.12] md:tracking-[-0.7px]">
           상담 접수부터 배포까지,
           <br />세 단계로 진행합니다.
         </h1>

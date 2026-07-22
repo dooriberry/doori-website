@@ -19,7 +19,7 @@ function Home() {
             </span>
 
             {/* display-xxl: 56px / 300 / -1.4px / lh 1.03~ */}
-            <h1 className="mt-7 max-w-xl break-keep text-[36px] font-bold leading-[1.12] tracking-[-0.7px] text-ink md:text-[48px] lg:text-[56px] lg:leading-[1.08] lg:tracking-[-1px]">
+            <h1 className="display-3d mt-7 max-w-xl break-keep text-[36px] font-bold leading-[1.12] tracking-[-0.7px] text-ink md:text-[48px] lg:text-[56px] lg:leading-[1.08] lg:tracking-[-1px]">
               한 번 하고 끝나는 게 아니라,
               <br />
               <span className="text-primary">다음 날 매출이 바뀝니다.</span>

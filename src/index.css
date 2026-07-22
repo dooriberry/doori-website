@@ -121,6 +121,45 @@ h4 {
   outline-offset: 2px;
 }
 
+/* ── 히어로 배경 3D 드리프트 ──
+   이미지가 한 방향(대각선 위쪽)으로 천천히 흘러가며 스케일·회전으로 깊이감을 준다.
+   --drift(0~1, 깊이 비례)로 가까운 이미지일수록 크게 움직인다. 마우스 패럴랙스와 합성됨. */
+@keyframes hero-drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  to {
+    transform: translate3d(
+        calc(26px * var(--drift, 1)),
+        calc(-34px * var(--drift, 1)),
+        0
+      )
+      scale(calc(1 + 0.08 * var(--drift, 1)))
+      rotate(calc(-1.5deg * var(--drift, 1)));
+  }
+}
+
+.hero-drift {
+  animation: hero-drift var(--drift-dur, 11s) ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* 입체 텍스트 — 은은한 돌출 + 부드러운 그림자 (라이트 톤과 이질감 없이 살짝 떠 보이게) */
+.display-3d {
+  text-shadow:
+    0 1px 0 rgba(13, 37, 61, 0.12),
+    0 2px 1px rgba(13, 37, 61, 0.1),
+    0 4px 8px rgba(0, 55, 112, 0.14),
+    0 10px 24px rgba(0, 55, 112, 0.1);
+}
+
+/* 동작 줄이기 사용자: 자동 움직임 정지 */
+@media (prefers-reduced-motion: reduce) {
+  .hero-drift {
+    animation: none;
+  }
+}
+
 @layer components {
   /* button-primary-pill — 모바일에서 44px 터치 타깃(DESIGN.md), sm 이상 8px 16px */
   .btn-primary {
